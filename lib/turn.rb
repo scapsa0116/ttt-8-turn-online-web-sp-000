@@ -14,7 +14,7 @@ puts "Welcome to Tic Tac Toe"
 puts display_board(board)
 turn(board)
 
-def move(board, index, player = "X")     
+def move(board, index, player = "X")
    board[index] = player
 end
 def position_taken?(board, index)
