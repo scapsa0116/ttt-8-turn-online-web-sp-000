@@ -1,15 +1,4 @@
-def display_board
-   puts row = ["   " "|" "   " "|" "   "]
-   puts separator = "-----------"
-   puts row
-   puts separator
-   puts row
-   |    |
- -----------
-   |    |
- -----------
-   |    |
- end
+
 def display_board(board)
   puts board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
   board
@@ -20,7 +9,12 @@ def display_board(board)
    puts "-----------"
    puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
-display_board(board)
+board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']
+puts "Welcome to Tic Tac Toe"
+puts display_board(board)
+turn(board)
+
+
 def move(board, index, player = "X")
    board[index] = player
 end
