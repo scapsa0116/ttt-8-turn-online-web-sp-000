@@ -33,15 +33,15 @@ def valid_move?(board, index)
    end
 end
 
-def turn_count(board)
-   counter = 0
-   board.each do |spaces|
-      if spaces == "X" || spaces == "O"
-         counter += 1
-      end
-   end
-   counter
-end
-def current_player(board)
-   turn_count(board) % 2 == 0 ? "X" : "O"
+def turn(board)
+    puts "Please enter 1-9:"
+    input = gets.chomp
+    input = input_to_index(input)
+    if valid_move?(input, board)
+      move(board, input)
+      puts display_board(board)
+    else
+      puts "That is an invalid entry!"
+      turn(board)
+    end
 end
