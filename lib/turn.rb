@@ -21,7 +21,7 @@ def display_board(board)
    puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 display_board(board)
-def move(board, index, player)
+def move(board, index, player = "X")
    board[index] = player
 end
 def position_taken?(board, index)
