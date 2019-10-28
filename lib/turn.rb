@@ -10,8 +10,9 @@ def turn(board)
   index = input_to_index(num)
   if valid_move?(board, index) == true
     move(board, index)
-    display_board(board)
+    puts display_board(board)
   else
+    puts "invalid entry"
     turn(board)
   end
 end
